@@ -204,6 +204,7 @@ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida San
 
   #projects a{
   text-decoration: none;
+  color:rgb(42, 40, 40)
 }
   #contact {
       color: rgb(52, 7, 59);
