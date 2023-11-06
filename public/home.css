@@ -123,6 +123,8 @@ main {
   #soft-skills .project-list {
     position: relative; 
     z-index: 1; 
+    color: #5c5757;
+    font-size: 30px;
     
 }
 @keyframes fadeEffect {
@@ -308,4 +310,86 @@ p {
     100% {
         background-position: 0 0, 300px 100px;
     }
+}
+/* For mobile devices */
+@media (max-width: 768px) {
+  .lower-section {
+    background-size: cover;
+  }
+  #about {
+    width: 100%;
+  }
+  #experience, #education, #projects, #contact, #skills, #soft-skills {
+    padding: 50px;
+  }
+}
+
+/* For tablets and larger devices */
+@media (min-width: 768px) {
+  .lower-section {
+    background-size: cover;
+  }
+  #about {
+    width: 50%;
+  }
+  #experience, #education, #projects, #contact, #skills, #soft-skills {
+    padding: 100px;
+  }
+}
+
+/* For larger desktop screens */
+@media (min-width: 1200px) {
+  .lower-section {
+    background-size: cover;
+  }
+  #about {
+    width: 50%;
+  }
+  #experience, #education, #projects, #contact, #skills, #soft-skills {
+    padding: 150px;
+  }
+}
+
+/* Adjust fonts for different screen sizes */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  .project-list {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  h2 {
+    font-size: 2.4rem;
+  }
+  p {
+    font-size: 1.4rem;
+  }
+  .project-list {
+    font-size: 1.4rem;
+  }
+}
+
+/* Adjust the image animation for different screen sizes */
+@keyframes imageAnimation {
+  0% {
+    background-position: 0 0, 300px 100px;
+  }
+  25% {
+    background-position: 300px 100px, 600px 0;
+  }
+  50% {
+    background-position: 600px 0, 300px -100px;
+  }
+  75% {
+    background-position: 300px -100px, 0 0;
+  }
+  100% {
+    background-position: 0 0, 300px 100px;
+  }
 }
