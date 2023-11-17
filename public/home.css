@@ -1,29 +1,12 @@
 
 
   
-  @keyframes imageAnimation {
-    0% {
-      background-position: 0 0, 50% 50%;
-    }
-    25% {
-      background-position: 50% 0, 100% 50%;
-    }
-    50% {
-      background-position: 100% 0, 50% 50%;
-    }
-    75% {
-      background-position: 50% 0, 0 50%;
-    }
-    100% {
-      background-position: 0 0, 50% 50%;
-    }
-  }
-  
+ 
 
 
 
 
-main {
+  main {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     position: relative;
@@ -32,26 +15,45 @@ main {
     width: 100%;
     height: 100%;
     z-index: -1;
+    font-size: 40px;
     padding-top: 200px; 
     padding-bottom: 200px;
-    animation: imageAnimation 15s infinite;
+    animation: fadeInOut 15s infinite;
     background-image: url('images/martino-pietropoli-vhV8JnsQ_iQ-unsplash.jpg'), url('images/lilly-rum-eE4YBIxSP60-unsplash.jpg'),url('images/birmingham-museums-trust-x2g6ZnLO0_E-unsplash.jpg');
     background-size: 800px 800px;
     background-repeat: no-repeat;
     background-position: 0, 300px 100px, 600px 200px;
 }
 
+main h2{
+  font-size: 75px;
+}
+main img{
+  opacity: 0.5;
+}
+main p{
+font-size: 50px;}
+
+@keyframes fadeInOut {
+    0% { opacity: 1; }
+    25% { opacity: 0.75; }
+    50% { opacity: 0.5; }
+    75% { opacity: 0.75; }
+    100% { opacity: 1; }
+}
 
 
-/* Add a class or ID to the lower part for more specificity */
+
+
+
 .lower-section {
     background-color: #ffffff;
     padding-top: 200px;
     padding-bottom: 200px;
    
     display: flex;
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; /* Vertically center the content */
+    justify-content: center; 
+    align-items: center;
     flex-direction: column;
     
     font-size: 1.4em;
@@ -80,18 +82,17 @@ main {
 }
 
 .logo-item {
-  margin-right: 10px; /* Adjust the spacing as needed */
+  margin-right: 10px; 
 }
 
-/* Adjust the color and size of the logos */
 .logo-item i {
-  color: #302c2c; /* Set the desired color */
-  font-size: 40px; /* Set the desired size */
+  color: #302c2c; 
+  font-size: 40px; 
 }
 
 .contact-item img {
-  width: 50px; /* Adjust the width as needed */
-  height: 50px; /* Adjust the height as needed */
+  width: 50px; 
+  height: 50px; 
 }
 
 .contact-item:hover {
@@ -107,33 +108,25 @@ main {
   padding-bottom: 100px;
 }
 
-#soft-skills  {
-   background-color: rgb(44, 43, 43);
-    background-size: cover;
-    animation: transformAnimation 7s infinite alternate;
-    padding: 70px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+#soft-skills {
+  padding: 70px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: none; 
+  background: none;
 
-  }
+}
   #soft-skills h2{
     color:rgb(6, 44, 44)
     
   } 
   #soft-skills .project-list {
-    position: relative; 
-    z-index: 1; 
+   
     color: #5c5757;
     font-size: 30px;
+    background-image: none; 
+
     
-}
-@keyframes fadeEffect {
-  0% {
-    opacity: 0; 
-  }
-  100% {
-    opacity: 1; 
-  }
 }
 
 .animate-words {
@@ -242,7 +235,6 @@ color: rgb(39, 33, 30);
     }
   }
 
-/* Adjust the container to center its content properly */
 .lower-section .container {
     text-align: center;
 }
@@ -273,44 +265,88 @@ h2 {
 
 p {
     font-size: 1.7rem;
-    color: #053939;
+    color: #053b3b;
     font-family: cursive;
 }
-
-.project-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .project-item {
-    opacity: 0; 
-    transform: translateY(20px); 
-    transition: opacity 0.8s, transform 0.8s;
-  }
-  
-  .project-item.show {
-    opacity: 1; /* Show the project items when they are in the viewport */
-    transform: translateY(0); /* Move the items back to their original position */
-  }
-  
-
-@keyframes imageAnimation {
-    0% {
-        background-position: 0 0, 300px 100px;
-    }
-    25% {
-        background-position: 300px 100px, 600px 0;
-    }
-    50% {
-        background-position: 600px 0, 300px -100px;
-    }
-    75% {
-        background-position: 300px -100px, 0 0;
-    }
-    100% {
-        background-position: 0 0, 300px 100px;
-    }
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1000px; 
+  margin: 0 auto; 
 }
+
+.projects-item {
+  flex: 0 0 calc(33.33% - 20px); 
+  max-width: calc(33.33% - 20px); 
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.projects-item a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.projects-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.projects-item span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #f5f5f5;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px 0;
+  font-size: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.projects-item:hover img {
+  transform: scale(1.1);
+}
+
+.projects-item:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Styling for each project item */
+#projects .project-1 {
+  background-image: url('images/blog.png');
+}
+
+#projects .project-2 {
+  background-image: url('images/lemon.png');
+}
+
+#projects .project-3 {
+  background-image: url('images/vercel.png');
+}
+
+#projects .project-4 {
+  background-image: url('images/welcome.png');
+}
+
+#projects .project-5 {
+  background-image: url('images/modelport.png');
+}
+
+
 /* For mobile devices */
 @media (max-width: 768px) {
   .lower-section {
@@ -324,7 +360,6 @@ p {
   }
 }
 
-/* For tablets and larger devices */
 @media (min-width: 768px) {
   .lower-section {
     background-size: cover;
@@ -336,8 +371,10 @@ p {
     padding: 100px;
   }
 }
-
-/* For larger desktop screens */
+#contacts a{
+  text-decoration: none;
+  color: rgb(189, 113, 36);
+}
 @media (min-width: 1200px) {
   .lower-section {
     background-size: cover;
@@ -350,7 +387,6 @@ p {
   }
 }
 
-/* Adjust fonts for different screen sizes */
 @media (max-width: 600px) {
   h2 {
     font-size: 2rem;
@@ -375,7 +411,7 @@ p {
   }
 }
 
-/* Adjust the image animation for different screen sizes */
+/* This Adjusts the image animation for different screen sizes */
 @keyframes imageAnimation {
   0% {
     background-position: 0 0, 300px 100px;

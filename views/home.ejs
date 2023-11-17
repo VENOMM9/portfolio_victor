@@ -50,6 +50,42 @@
         <p class="animate-words">My technical expertise includes comfortability in using HTML, CSS, JavaScript, Node.js,  Express.js. I'm also versed in working with SQL and MongoDB databases, leveraging tools like Mongoose for efficient data management. With a good foundation in Git/GitHub and experience in testing with Jest, I ensure the reliability and scalability of my projects.</p>
       
       </section>
+      <section>
+        <h2>Projects</h2>
+  
+        <div id="projects" class="projects-container">
+          <div class="projects-item project-1">
+            <a href="https://domash.onrender.com/">
+              <img src="images/blog.png" alt="Blog Management API" />
+              <span>Blog Management API</span>
+            </a>
+          </div>
+          <div class="projects-item project-2">
+            <a href="lemon-a72u.onrender.com/">
+              <img src="images/lemon.png" alt="TODO Management App" />
+              <span>TODO Management App</span>
+            </a>
+          </div>
+          <div class="projects-item project-3">
+            <a href="https://website-portfolio-work-git-main-venomm9.vercel.app/">
+              <img src="images/vercel.png" alt="Portfolio Work" />
+              <span>Portfolio Work</span>
+            </a>
+          </div>
+          <div class="projects-item project-4">
+            <a href="https://victor-nkwuo.onrender.com/">
+              <img src="images/welcome.png" alt="My Portfolio" />
+              <span>My Portfolio</span>
+            </a>
+          </div>
+          <div class="projects-item project-5">
+            <a href="https://christina-melameka.onrender.com/">
+              <img src="images/modelport.png" alt="Project Portfolio Work" />
+              <span>Project Portfolio Work</span>
+            </a>
+          </div>
+        </div></section>
+        
       
       <section id="skills" class="hidden-section">
         <h2>Skills</h2>
@@ -138,25 +174,7 @@
           </li>
          
       </section>
-
-      <section id="projects" class="hidden-section">
-        <h2>Projects</h2>
-        <ul class="project-list">
-          <li class="project-item"> Blog Management API
-             <a href="https://domash.onrender.com/">&nbsp; &nbsp; &nbsp; BLOG API</a>
-          </li>
-          <li class="project-item">A basic Todo Management Application<a href="lemon-a72u.onrender.com/">&nbsp;&nbsp;&nbsp;TODO MANAGEMENT APP</a></li>
-          <li class="project-item">Website Portfolio  PROJECT
-             <a href="https://website-portfolio-work-git-main-venomm9.vercel.app/">&nbsp;&nbsp; &nbsp; PORTFOLIO WORK</a>
-          </li>
-          <li class="project-item"> Portfolio
-            <a href="https://victor-nkwuo.onrender.com/">&nbsp;&nbsp; &nbsp; MY PORTFOLIO</a>
-          </li>
-          <li class="project-item"> Portfolio
-            <a href="https://christina-melameka.onrender.com/">&nbsp;&nbsp; &nbsp; PROJECT PORTFOLIO WORK</a>
-          </li>
-        </ul>
-      </section>
+      
 
       <section id="contacts" class="hidden-section">
         <h2>Contact</h2>
@@ -184,7 +202,7 @@
           const targetElement = document.querySelector(targetId);
           if (targetElement) {
             window.scrollTo({
-              top: targetElement.offsetTop - 50, // Adjust the offset as needed
+              top: targetElement.offsetTop - 50, 
               behavior: "smooth",
             });
           }
@@ -211,7 +229,7 @@
         const currentScrollPosition = window.scrollY;
 
         if (currentScrollPosition > lastScrollPosition) {
-          // Scrolling down
+          //This is a function for  Scrolling down
           projectItems.forEach((item, index) => {
             if (isInViewport(item)) {
               item.classList.add("show");
@@ -224,7 +242,7 @@
             }
           });
         } else {
-          // Scrolling up
+          // This is a function for Scrolling up
           projectItems.forEach((item, index) => {
             if (!isInViewport(item)) {
               item.classList.remove("show");

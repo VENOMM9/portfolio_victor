@@ -44,15 +44,14 @@ main {
 
 
 
-/* Add a class or ID to the lower part for more specificity */
 .lower-section {
     background-color: #ffffff;
     padding-top: 200px;
     padding-bottom: 200px;
    
     display: flex;
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; /* Vertically center the content */
+    justify-content: center; 
+    align-items: center; 
     flex-direction: column;
     
     font-size: 1.4em;
@@ -81,18 +80,17 @@ main {
 }
 
 .logo-item {
-  margin-right: 10px; /* Adjust the spacing as needed */
+  margin-right: 10px;
 }
 
-/* Adjust the color and size of the logos */
 .logo-item i {
-  color: #302c2c; /* Set the desired color */
-  font-size: 40px; /* Set the desired size */
+  color: #302c2c; 
+  font-size: 40px; 
 }
 
 .contact-item img {
-  width: 50px; /* Adjust the width as needed */
-  height: 50px; /* Adjust the height as needed */
+  width: 50px; 
+  height: 50px;
 }
 
 .contact-item:hover {
@@ -239,7 +237,6 @@ color: rgb(117, 55, 30);
     }
   }
 
-/* Adjust the container to center its content properly */
 .lower-section .container {
     text-align: center;
 }
@@ -286,8 +283,8 @@ p {
   }
   
   .project-item.show {
-    opacity: 1; /* Show the project items when they are in the viewport */
-    transform: translateY(0); /* Move the items back to their original position */
+    opacity: 1; 
+    transform: translateY(0); 
   }
   
 
