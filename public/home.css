@@ -108,7 +108,7 @@ main {
 }
 
 #soft-skills  {
-    background-image: url('images/marissa-grootes-SRrWOw-sCyc-unsplash.jpg');
+   background-color: rgb(44, 43, 43);
     background-size: cover;
     animation: transformAnimation 7s infinite alternate;
     padding: 70px;
